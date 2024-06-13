@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	background-color: #1c1c1e;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.App {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.calculator {
+	background-color: #333333;
+	border-radius: 10px;
+	padding: 1rem;
+	display: flex; /* Updated to flex to control child positioning */
+	flex-direction: column; /* Stack children vertically */
+	align-items: flex-end; /* Align children to the right */
+}
+
+.displayWindow {
+	background-color: #1c1c1e;
+	color: white;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	width: 100%; /* Occupy full width */
+	text-align: right; /* Align text to the right */
+}
+
+.displayWindow .expression {
+	font-size: 1.2rem;
+	color: #ff9500;
+}
+
+.displayWindow .result {
+	font-size: 3rem;
+	font-weight: bold;
+}
+.number.span-two {
+	grid-column: span 2;
+}
+
+.keysWindow {
+	display: grid;
+	grid-template-columns: repeat(
+		10,
+		1fr
+	); /* Adjust grid columns for better layout */
+	gap: 0.1rem;
+	width: 100%; /* Occupy full width */
+}
+
+.button {
+	background-color: #505050;
+	color: white;
+	border-radius: 0;
+	padding: 1rem;
+	text-align: center;
+	font-size: 1.5rem;
+	transition: background-color 0.3s ease;
+	cursor: pointer; /* Add pointer cursor for buttons */
+}
+
+.button:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.button.operation {
+	background-color: #ff9500;
+	color: white;
+}
+
+.button.equal {
+	background-color: #ff9500;
+	color: white;
+}
+
+.button.number {
+	background-color: #71716e;
+	color: white;
+}
+
+.credit {
+	padding-top: 2rem;
+}
